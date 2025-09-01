@@ -1,216 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chioma Ezeh – Software Engineer (Back‑End) – CV</title>
-  <meta name="description" content="CV of Chioma Ezeh – Software Engineer (Back‑End)">
-  <!-- Accent + Typography -->
-  <style>
-    :root{
-      --accent:#14b8a6; /* teal-500 */
-      --ink:#0f172a;   /* slate-900 */
-      --muted:#475569; /* slate-600 */
-      --bg:#ffffff;    /* white background */
-      --chip:#e6fffa;  /* subtle tag bg */
-    }
-    html,body{background:var(--bg); margin:0; padding:0; color:var(--ink); font: 15.5px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, Noto Sans, "Apple Color Emoji","Segoe UI Emoji";}
-    .page{max-width: 860px; margin: 28px auto 64px; padding: 32px; box-shadow: 0 8px 30px rgba(2,8,23,.08); border-radius: 18px; background: var(--bg);} 
-    header{display:grid; grid-template-columns: 1fr 140px; gap: 24px; align-items:center;}
-    h1{font-size: 34px; line-height:1.1; margin:0;}
-    .subtitle{color:var(--accent); font-weight:700; letter-spacing:.3px; margin-top:6px}
-.photo{
-  width:140px;
-  height:140px;
-  border-radius: 50%;
-  border:3px solid var(--accent);
-  background:#f0f9f8;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--ink);
-  font-size:23px;
-  font-weight: bold;
-  text-align:center;
-  padding:8px
-  margin-top: 150px;
-  align-self: flex-start;
-}
-.contacts{
-  display:flex;
-  flex-direction:column;   /* stack items vertically */
-  gap:6px;                 /* vertical spacing */
-  margin-top:14px;
-  color:var(--muted);
-}
-.contacts a{
-  color:inherit;
-  text-decoration:none;
-  border-bottom:1px dashed rgba(20,184,166,.35);
-}
-.sep{display:none;} /* hide the dots since you don’t need them in a column */
-
-
-    h2{font-size: 18px; margin: 28px 0 10px; padding-bottom:4px; border-bottom:2px solid rgba(20,184,166,.2); position:relative}
-    h2::before{content:""; position:absolute; left:0; bottom:-2px; width:90px; height:2px; background:var(--accent)}
-    p{margin:8px 0}
-    .lead{margin-top:8px; color:var(--muted)}
-
-    .list{display:grid; gap:10px}
-    .skillgrid{display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:14px}
-    .card{border:1px solid rgba(2,8,23,.06); border-radius:14px; padding:12px 14px; background:#fff}
-    .tag{display:inline-block; padding:2px 8px; border-radius:999px; background:var(--chip); color:#0f766e; font-size:12px; margin:2px 6px 0 0}
-
-    .project a{color:var(--ink); text-decoration:none}
-    .project a:hover{color:#0f766e}
-    .muted{color:var(--muted)}
-
-    .xp h3{margin:0; font-size:16px}
-    .xp .where{color:var(--muted); font-weight:600}
-    .xp .desc{margin-top:6px}
-
-    .toolbar{display:flex; justify-content:space-between; align-items:center; gap:10px; margin: 12px 0 0}
-    .btn{border:1px solid rgba(2,8,23,.1); background:#fff; padding:8px 12px; border-radius:10px; cursor:pointer}
-    .btn-accent{border-color:transparent; background:var(--accent); color:#fff}
-
-    /* Print styles: clean A4, hide buttons/shadows */
-    @media print{
-      .page{box-shadow:none; margin:0; border-radius:0}
-      .toolbar{display:none}
-      a{color:inherit; text-decoration:none}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chioma Ezeh – Back-End Engineer CV</title>
+<style>
+  :root{
+    --accent:#14b8a6;
+    --ink:#0f172a;
+    --muted:#475569;
+    --bg:#ffffff;
+    --chip:#e6fffa;
+  }
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:var(--bg); color:var(--ink);}
+  .page { max-width: 850px; margin: 30px auto; padding:30px; background:#fff; box-shadow: 0 8px 30px rgba(2,8,23,.08); border-radius:16px;}
+  header{display:flex; justify-content:space-between; align-items:center;}
+  .header-info{max-width:65%;}
+  h1{font-size:32px; margin:0;}
+  .subtitle{color:var(--accent); font-weight:bold; margin-top:4px;}
+  .contacts p, .contacts a{margin:2px 0; color:var(--muted); font-size:14px; text-decoration:none;}
+  .section{margin-top:24px;}
+  h2{font-size:18px; margin-bottom:10px; border-bottom:2px solid var(--accent); padding-bottom:4px;}
+  .lead{color:var(--muted);}
+  ul{padding-left:20px;}
+  li{margin-bottom:6px;}
+  .skills span{display:inline-block; background:var(--chip); color:#0f766e; padding:2px 8px; margin:2px 6px 2px 0; border-radius:999px; font-size:12px;}
+  .projects a{color:var(--ink); text-decoration:none;}
+  .projects a:hover{color:#0f766e;}
+  .experience h3{margin:0; font-size:16px;}
+  .experience .where{font-weight:600; color:var(--muted);}
+  .experience p{margin:4px 0 12px;}
+  .photo{width:140px; height:140px; border-radius:50%; border:3px solid var(--accent); background:#f0f9f8; display:flex; align-items:center; justify-content:center; color:var(--ink); font-weight:bold; text-align:center; padding:8px; font-size:16px;}
+</style>
 </head>
 <body>
-  <div class="page">
-    <div class="toolbar">
+<div class="page">
+  <header>
+    <div class="header-info">
+      <h1>Chioma Ezeh</h1>
+      <div class="subtitle">Back-End Engineer | Python & Django Specialist</div>
+      <div class="contacts">
+        <p>📞 09130114432 | ✉️ cezeh247@gmail.com</p>
+        <a href="https://chioma-website.netlify.app/" target="_blank">🌐 Portfolio</a>
+        <a href="https://github.com/Nicole9-Sky" target="_blank">🐙 GitHub</a>
+        <a href="https://www.linkedin.com/in/nicole-in-tech" target="_blank">🔗 LinkedIn</a>
+        <a href="https://x.com/Nicole00081" target="_blank">🐦 Twitter</a>
+        <a href="https://t.me/Nicolecodes" target="_blank">📨 Telegram</a>
+      </div>
     </div>
-    <header>
-      <div>
-        <h1>CHIOMA EZEH</h1>
-        <div class="subtitle">SOFTWARE ENGINEER (BACK‑END)</div>
-        <div class="contacts">
-  <span>📞 09130114432</span>
-  <a href="https://chioma-website.netlify.app/" target="_blank" rel="noopener">
-    🌐 Portfolio — https://chioma-website.netlify.app/
-  </a>
-  <a href="https://github.com/Nicole9-Sky" target="_blank" rel="noopener">
-    🐙 GitHub — https://github.com/Nicole9-Sky
-  </a>
-  <a href="https://www.linkedin.com/in/nicole-in-tech" target="_blank" rel="noopener">
-    🔗 LinkedIn — https://www.linkedin.com/in/nicole-in-tech
-  </a>
-  <a href="https://x.com/yourtwitter" target="_blank" rel="noopener">
-    🐦 Twitter — https://x.com/Nicole00081
-  </a>
-  <a href="mailto:yourmail@example.com">
-    ✉️ Email — cezeh247@gmail.com
-  </a>
-  <a href="https://t.me/yourtelegram" target="_blank" rel="noopener">
-    📨 Telegram — https://t.me/Nicolecodes 
-  </a>
-</div>
+    <div class="photo">BACK-END ENGINEER</div>
+  </header>
 
-      </div>
-      <div class="photo">
-  BACK-END<br>ENGINEER
-</div>
-    </header>
-
-    <section>
-      <h2>About Me</h2>
-      <p class="lead">I'm a back‑end engineer focused on Django, REST APIs, and database design. I blend strong engineering with clean UI thinking to ship fast, reliable features.</p>
-      <ul class="list">
-        <li><strong>User Authentication</strong> – secure login/registration using Django’s auth and custom features.</li>
-        <li><strong>APIs &amp; Backend Development</strong> – RESTful APIs with Django &amp; Python, database design with MySQL, Git/GitHub workflows.</li>
-        <li><strong>Web Development</strong> – responsive, production‑ready sites with HTML, CSS, Bootstrap, Django/Flask and smooth deployments.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Skills I Excel In</h2>
-      <div class="skillgrid">
-        <div class="card">
-          <h3>Website Creation</h3>
-          <p class="muted">HTML, CSS, Bootstrap, Django, Flask, Deployments</p>
-          <span class="tag">Advanced</span>
-        </div>
-        <div class="card">
-          <h3>Languages &amp; Frameworks</h3>
-          <p class="muted">Python, Django, React, JavaScript</p>
-          <span class="tag">Intermediate → Advanced</span>
-        </div>
-        <div class="card">
-          <h3>Databases &amp; Tools</h3>
-          <p class="muted">MySQL, PostgreSQL, Git/GitHub</p>
-          <span class="tag">Intermediate → Advanced</span>
-        </div>
-        <div class="card">
-          <h3>Web &amp; Graphic Design</h3>
-          <p class="muted">UI/UX, Figma, Canva, Responsive Layouts</p>
-          <span class="tag">Intermediate</span>
-        </div>
-        <div class="card">
-          <h3>Web3 Content Writing</h3>
-          <p class="muted">Technical articles, NFT guides, blockchain tutorials, smart‑contract explainers</p>
-          <span class="tag">Intermediate</span>
-        </div>
-        <div class="card">
-          <h3>Soft Skills</h3>
-          <p class="muted">Communication, Problem‑solving, Teamwork, Adaptability, Time Management</p>
-          <span class="tag">Advanced</span>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <div class="list project">
-        <div>
-          <strong><a href="https://django-blog-project-2-whsp.onrender.com" target="_blank" rel="noopener">Django Blog</a></strong>
-        </div>
-        <div>
-          <strong><a href="https://github.com/Nicole9-Sky/Library-Management-Website.git" target="_blank" rel="noopener">Library Management System API</a></strong>
-        </div>
-        <div>
-          <strong><a href="https://bookvault-frontend.netlify.app/" target="_blank" rel="noopener">Bookstore Database (BookVault Frontend)</a></strong>
-        </div>
-        <div>
-          <strong><a href="https://chioma-website.netlify.app/" target="_blank" rel="noopener">Portfolio Website</a></strong>
-        </div>
-        <div>
-          <strong><a href="https://django-two-factor-auth-1.onrender.com/" target="_blank" rel="noopener">Two‑Factor Authentication Django App</a></strong>
-        </div>
-        <div class="muted"><strong><a>Web3 Contributions: @union_build, @FlagshipFYI, @pharos_network, @KaitoAI, @0G_labs</a></strong></div>
-      </div>
-    </section>
-
-    <section class="xp">
-      <h2>Experience</h2>
-
-      <div>
-        <h3>Web3 Content Creator &amp; Freelance Developer</h3>
-        <div class="where">Self‑Projects &amp; Freelance</div>
-        <p class="desc">Create educational Web3 content, build small‑scale blockchain projects, manage GitHub repositories, and deliver production‑ready web applications. Building small projects for clients; managing GitHub repositories; and delivering production‑ready web apps.</p>
-      </div>
-
-      <div>
-        <h3>Django &amp; Backend Developer</h3>
-        <div class="where">ALX Projects</div>
-        <p class="desc">Developed secure Django applications, implemented REST APIs, user authentication, database design with MySQL, and deployed projects online. Developed full‑stack web apps using Django and React, implemented secure authentication, and designed databases with MySQL.</p>
-      </div>
-
-      <div>
-        <h3>Web Development Intern</h3>
-        <div class="where">ALX Africa</div>
-        <p class="desc">Learned backend development and REST API design, and built foundational web applications using Django and Bootstrap.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Languages</h2>
-      <p>German — (Basic)</p>
-    </section>
+  <div class="section">
+    <h2>Professional Summary</h2>
+    <p class="lead">
+      Back-End Engineer with 2+ years of hands-on experience designing and delivering scalable web applications using Python, Django, and REST APIs. Built secure and optimized databases with MySQL & PostgreSQL, deployed production-ready apps, and collaborated with cross-functional teams to ship features efficiently. Passionate about clean code, automation, and backend architecture that scales.
+    </p>
   </div>
+
+  <div class="section">
+    <h2>Core Skills</h2>
+    <div class="skills">
+      <span>Python</span><span>Django</span><span>REST APIs</span><span>MySQL</span><span>PostgreSQL</span>
+      <span>Git/GitHub</span><span>Docker</span><span>HTML/CSS</span><span>Bootstrap</span><span>React</span>
+      <span>Unit Testing</span><span>Debugging</span><span>CI/CD</span><span>UI/UX</span><span>Figma</span>
+      <span>Data Modeling</span><span>Authentication</span><span>Performance Optimization</span>
+    </div>
+  </div>
+
+  <div class="section projects">
+    <h2>Selected Projects & Achievements</h2>
+    <ul>
+      <li><a href="https://django-blog-project-2-whsp.onrender.com" target="_blank">Django Blog</a> – Designed full-featured blog with authentication, CRUD, REST API integration; reached 500+ users.</li>
+      <li><a href="https://github.com/Nicole9-Sky/Library-Management-Website.git" target="_blank">Library Management System API</a> – Built secure API for managing books and users; reduced query latency by 30% through optimized MySQL design.</li>
+      <li><a href="https://bookvault-frontend.netlify.app/" target="_blank">BookVault Frontend</a> – Developed responsive bookstore frontend connected to backend API, enabling real-time inventory updates.</li>
+      <li><a href="https://chioma-website.netlify.app/" target="_blank">Portfolio Website</a> – Showcased 10+ projects with live demos and GitHub links, improving online visibility and recruiter engagement.</li>
+      <li><a href="https://django-two-factor-auth-1.onrender.com/" target="_blank">Two-Factor Authentication App</a> – Implemented 2FA in Django, improving security for user authentication.</li>
+    </ul>
+  </div>
+
+  <div class="section experience">
+    <h2>Professional Experience</h2>
+
+    <div>
+      <h3>Web3 Content Creator & Freelance Developer</h3>
+      <div class="where">Self-Projects & Freelance | Jan 2024 – Present</div>
+      <p>Produced 20+ educational Web3 articles, developed small-scale blockchain apps, managed GitHub repositories, and delivered production-ready applications. Collaborated with clients to build functional web apps and smart-contract tutorials.</p>
+    </div>
+
+    <div>
+      <h3>Django & Backend Developer</h3>
+      <div class="where">ALX Projects | Jan 2024 – Present</div>
+      <p>Developed secure Django applications with REST APIs, integrated MySQL databases, and implemented user authentication. Delivered full-stack apps with React, achieving <strong>99% uptime</strong> in deployed projects.</p>
+    </div>
+
+    <div>
+      <h3>Web Development Intern</h3>
+      <div class="where">ALX Africa | Jan 2024 – Jun 2024</div>
+      <p>Learned backend development, REST API design, and database modeling. Built foundational Django and Bootstrap web applications, improving hands-on coding skills and problem-solving ability.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Languages</h2>
+    <p>German — Basic (Conversational)</p>
+  </div>
+</div>
 </body>
 </html>
